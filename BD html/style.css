@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f5;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Page Styles */
+.page, #front-page {
+  display: none;
+  padding: 40px 20px;
+}
+
+#front-page {
+  display: block;
+  background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #e754a8;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #d54a96;
+}
+
+button + button {
+  background-color: #4682b4; /* Color for the back button */
+}
+
+button + button:hover {
+  background-color: #365f8f; /* Hover color for the back button */
+}
+
+img {
+  width: 250px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Page 3 Specific Styles */
+.page #page-3 {
+  background: #e0f7fa;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#page-3 h2 {
+  font-size: 2.5em;
+  color: #ff1493;
+  margin-bottom: 20px;
+}
+
+.couple-animation img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  margin: 20px 0;
+  animation: bounce 2s infinite;
+}
+
+.wish-message {
+  font-size: 1.2em;
+  color: #000;
+  line-height: 1.8;
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.wish-message p {
+  margin: 10px 0;
+  animation: slideIn 2s ease-in-out;
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Animation for Bouncing Couple Image */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Animation for Wish Message */
+@keyframes slideIn {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+/* Rainfall Styling */
+#rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.raindrop {
+  position: absolute;
+  width: 30px; /* Bigger size */
+  height: 30px; /* Bigger size */
+  background: #ff69b4;
+  border-radius: 50%;
+  animation: fall 3s linear infinite;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px; /* Adjust text size */
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(100vh); }
+}
